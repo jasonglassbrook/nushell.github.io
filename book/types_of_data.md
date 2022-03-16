@@ -29,6 +29,7 @@ A string of characters that represents text. There are a few ways we can represe
 Double quotes are the most common form of quotes and one you may see whenever text is required.
 
 **Single quotes**
+
 ```
 'my message'
 ```
@@ -36,13 +37,13 @@ Double quotes are the most common form of quotes and one you may see whenever te
 Single quotes also give you a string value, just like double quotes. The difference here is that they allow you to use double quotes in the text: `'he said "can you grab my glass?"'`
 
 **String interpolation**
+
 Nushell supports string interpolation, allowing you to run sub-expressions inside of strings prefixed with `$`. For instance:
 
 ```
 > echo $"6 x 7 = (6 * 7)"
 6 x 7 = 42
 ```
-
 
 ```
 > ls | each { |it| echo $"($it.name) is ($it.size)" }
@@ -59,7 +60,7 @@ Nushell supports string interpolation, allowing you to run sub-expressions insid
 > echo hello
 ```
 
-A unique trait of Nushell is that you can also create a string of one word without any quotes at all.
+As in many shell languages, you can also create a string of one word without quoting it.
 
 The above is the same as if we had written:
 
